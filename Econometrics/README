@@ -1,0 +1,11 @@
+Here is a task requiring to perform an econometrical analysis of time-series data.
+At first the code was written in Stata, but afterwards I decided to rewrite it in R to improve my skills in this language.
+Although the techniques are not entirely the same, both approaches deliver their goal.
+
+
+
+The Stata files contain the log and do files in txt and stata format, the data and files with the analysis and comments
+Before running the code, the user should change the paths
+
+The R code consists of 2 parts (separate files).
+The data file should be run first because the file with the analysis uses it as a source. The paths should be changed as well
