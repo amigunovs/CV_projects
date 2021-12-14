@@ -1,0 +1,17 @@
+*** DESCRIPTION ***
+
+This exercise consists of two parts:
+1) parsing real-time data from the internet (ss.com webpage) on flats 
+2) analyzing it with the help of machine learning and searching for potentially cheap flats
+
+*** NOTES ***
+
+Possible improvements:
+1) Reviewing the hood names, automating the part where some names are set manually
+2) Reviewing the random forest part
+
+*** BACKGROUND ***
+
+While I was studying at my first university, I saw a research made by one of the lecturers who taught data analysis subject. He retrieved similar data from multiple sources and performed the price analysis of real estate in Riga.
+I found his idea quite applicable in the real life if the analyzed information is up-to-date. So, I thought about writing a parser which could operatively summarize data from a source and find the most beneficial offers.
+This code can also become a base in parsing some other data from ss.com (e.g. job offers), and the code's second part containing random forest technique could be used to perform an analysis with some other data.
