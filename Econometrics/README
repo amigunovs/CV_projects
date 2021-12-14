@@ -1,11 +1,24 @@
-Here is a task requiring to perform an econometrical analysis of time-series data.
-At first the code was written in Stata, but afterwards I decided to rewrite it in R to improve my skills in this language.
-Although the techniques are not entirely the same, both approaches deliver their goal.
+*** DATA AND APPROACH ***
+
+The data consists of 4 variables: price index in the euro area, price index in Latvia, Latvian export and euro area import (internal + external).
+Period: from 01-1999 to 12-2019, dt = 1 month
+
+Applied techniques: seasonal adjustment, ADF test, AR models, cointegration, Newey-West HAC, information criteria
+Applied libraries (for R): eurostat, tidyr, dplyr, seasonal, ggplot2, ggfortify, urca, forecast, dynlm, stargazer
 
 
+*** REMARKS ***
 
-The Stata files contain the log and do files in txt and stata format, the data and files with the analysis and comments
-Before running the code, the user should change the paths
+The Stata files contain the log and do files in txt and stata format, the data and files with the analysis and comments.
+Before running the code, the user should change the paths.
 
 The R code consists of 2 parts (separate files).
-The data file should be run first because the file with the analysis uses it as a source. The paths should be changed as well
+The data file should be run first because the file with the analysis uses it as a source. The paths should be changed as well.
+My comments are inside.
+
+
+*** BACKGROUND ***
+
+This task required to perform an econometrical analysis of time-series data.
+At first the code was written in Stata, but afterwards I decided to rewrite it in R to improve my skills in this language.
+Although the techniques are not entirely the same, both approaches deliver their goal.
