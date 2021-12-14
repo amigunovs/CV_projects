@@ -14,4 +14,4 @@ Possible improvements:
 
 While I was studying at my first university, I saw a research made by one of the lecturers who taught data analysis subject. He retrieved similar data from multiple sources and performed the price analysis of real estate in Riga.
 I found his idea quite applicable in the real life if the analyzed information is up-to-date. So, I thought about writing a parser which could operatively summarize data from a source and find the most beneficial offers.
-This code can also become a base in parsing some other data from ss.com (e.g. job offers), and the code's second part containing random forest technique could be used to perform an analysis with some other data.
+This code can also become a base in parsing some other data from ss.com (e.g. job offers), and the code's second part containing random forest technique could be used to perform an analysis with other relevant data.
