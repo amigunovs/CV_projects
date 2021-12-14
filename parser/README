@@ -5,7 +5,7 @@ This exercise consists of two parts:
 2) analyzing it with the help of machine learning and searching for potentially cheap flats
 
 The first file to run is the parser file, the second is the analysis file. Paths in both of the files should be changed.
-In case something goes wrong with the parser file, the csv file contains the sample data which still can be applied together with the random forest model
+In case something goes wrong with the parser file, the csv file contains sample data which still can be applied together with the random forest model
 
 *** NOTES ***
 
