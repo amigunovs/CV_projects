@@ -1,0 +1,22 @@
+*** Description *** 
+
+
+
+*** BACKGROUND ***
+
+This project is currently unfinished, but I would really want to finish it when I have time
+Initially this project was an effort to create a relatively huge tool that can operatively extract data from PDF reports of different companies and automatically calculate the fair stock price of the company. 
+Without adding any forecasts of financial indicators, which is a separate problem itself and requires time to develop a meaningful solution, this tool would be able to calculate the fair price in the previous year based on the financial report data. 
+Although this would not be that useful in practice, it would be a good start in analyzing the yearly reports, as this tool can be improved in many directions
+
+Overall, my vision of the tool is the following:
+1) Using RSelenium getting the report(s) downloaded (currently done manually)
+2) Searching the pages with relevant tables (currently found manually)
+3) Extracting the data (currently the code extracts only the balance sheet data, but the same can be done with other tables)
+4) Connecting the extracted data with an already built excel model (contains 3 valuation approaches: dividend discount model, FCFF model and abnormal earnings model) 
+
+Although the mentioned steps will allow only to make a post-estimation of the stock price, to make it more applicable for the real life, I could add:
+a) the already mentioned forecasting tool for different indicators (e.g. revenues, costs, EBIT, PPE, etc.), so the current and future price of a company could be forecasted
+b) work on a sentiment analysis of a report itself - although it is clear that the companies wrtie their reports using "positive" words, the code user still can learn about future company plans by searching for respective key words.
+For example, whether the company considers itslef as an agressive market conqueror or is going to focus on internal operations and stability. Knowing the future strategy at least would help to decide on the most important indicators to consider during the analysis
+c) include market price fluctuations
