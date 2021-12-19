@@ -7,6 +7,8 @@ This exercise consists of two parts:
 The first file to run is the parser file, the second is the analysis file. Paths in both of the files should be changed.
 In case something goes wrong with the parser file, the csv file contains sample data which still can be used together with the random forest model
 
+Applied libraries: dplyr, rvest, XML, httr, stringr, stringi, corrplot, ggplot2, lattice, randomForest, fastDummies, caret
+
 *** NOTES ***
 
 Possible improvements:
