@@ -1,5 +1,9 @@
-*** Description *** 
+*** DESCRIPTION *** 
 
+The program opens a PDF report, finds the page specified and rewrites the table to excel file for further analysis. There are two separate files which contain two different approaches.
+The first approach uses regular expressions to perform the main task, the second one uses split function. At the end the result is the same
+
+Applied libraries: pdftools, magick, stringr, readr, tidyverse, xlsx, splitstackshape
 
 
 *** BACKGROUND ***
