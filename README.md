@@ -9,4 +9,4 @@ Currently, there are examples of:
 * Data parser that allows to get information from a PDF file in excel format (in two ways)
 * Other smaller projects that I used as instruments at work
 
-As I mainly have been working with data analysis, many of my code files repeat themselves Since the repository is supposed to contain only unique topics, I decided to exclude files that have similar code. All in all, these are only the examples.
+As I mainly have been working with data analysis, many of my code files repeat themselves. Since the repository is supposed to contain only unique topics, I decided to exclude files that have similar code. All in all, these are only the examples.
