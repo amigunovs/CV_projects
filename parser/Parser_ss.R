@@ -126,4 +126,20 @@ qi2["Street"] <- b
 
 qi2 <- qi2[-c(2,5)]
 
+# If needed, the data can be stored in csv
 # write.csv(qi2, file = "SS_parser.csv", append = FALSE, col.names = TRUE, row.names = FALSE)
+
+# Or SQL (which is more efficient)
+
+# if(!"RSQLite" %in% installed.packages()) install.packages("RSQLite")
+# if(!"DBI" %in% installed.packages()) install.packages("DBI")
+# 
+# 
+# if(!"DBI" %in% search()) library("DBI")
+# if(!"RSQLite" %in% search()) library("RSQLite")
+# 
+# setwd("C:/Users/Андрей/Desktop")
+# 
+# db <- dbConnect(RSQLite::SQLite(), "flats.sqlite")
+# dbWriteTable(db, "flats", qi2)
+# dbDisconnect(db)
