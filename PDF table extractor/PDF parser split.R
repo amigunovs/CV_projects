@@ -1,4 +1,6 @@
-setwd("C:/Users/ΐνδπει/Desktop")
+# Working directory and libraries
+
+setwd("C:/Users/Γ€Γ­Γ¤Γ°Γ¥Γ©/Desktop")
 
 if(!"pdftools" %in% installed.packages()) install.packages("pdftools")
 if(!"magick" %in% installed.packages()) install.packages("magick")
@@ -17,17 +19,19 @@ if(!"readr" %in% search()) library("readr")
 if(!"tidyverse" %in% search()) library("tidyverse")
 if(!"xlsx" %in% search()) library("xlsx")
 
-url <- "C:/Users/ΐνδπει/Desktop/TSLA.pdf"
+# Creating url, copying the page into a new file and unlisting the data
+url <- "C:/Users/Γ€Γ­Γ¤Γ°Γ¥Γ©/Desktop/TSLA.pdf"
 
 file <- pdf_text(url)
 
 
 pdf_subset(url, pages = 68, output = "intro2.pdf")
 
-file2 <- pdf_text("C:/Users/ΐνδπει/Desktop/intro2.pdf")
+file2 <- pdf_text("C:/Users/Γ€Γ­Γ¤Γ°Γ¥Γ©/Desktop/intro2.pdf")
 
 filesplit <- c(unlist(strsplit(file2[[1]], "\n"))) 
 
+# Getting rid of the special symbols
 for (i in seq_along(filesplit)) {
   
   filesplit[i] <- gsub(",", "", filesplit[i])
@@ -36,14 +40,17 @@ for (i in seq_along(filesplit)) {
   filesplit[i] <- gsub("\\$", "", filesplit[i])
 }
 
+# Applying the cSplit function
 file3 <- as.data.frame(filesplit)
 file4 <- cSplit(file3, 'filesplit', sep="   ", type.convert=FALSE)
 
+# Additional cosmetics 
 file4[5,3] <- file4[5,2]
 file4[6,3] <- file4[6,2]
 file4[6,2] <- file4[6,1]
 file4[5:6,1] <- NA
 
+# Creating the excel file
 frame <- as.data.frame(file4)
 write.xlsx(frame, "file.xlsx", sheetName = "Sheet1", 
            col.names = FALSE, row.names = FALSE, append = TRUE, showNA = FALSE)
