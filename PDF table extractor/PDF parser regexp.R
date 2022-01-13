@@ -1,4 +1,6 @@
-setwd("C:/Users/Àíäğåé/Desktop")
+###### Libraries #####
+
+setwd("C:/Users/ĞĞ½Ğ´Ñ€ĞµĞ¹/Desktop")
 
 if(!"pdftools" %in% installed.packages()) install.packages("pdftools")
 if(!"magick" %in% installed.packages()) install.packages("magick")
@@ -14,19 +16,32 @@ if(!"readr" %in% search()) library("readr")
 if(!"tidyverse" %in% search()) library("tidyverse")
 if(!"xlsx" %in% search()) library("xlsx")
 
-url <- "C:/Users/Àíäğåé/Desktop/TSLA.pdf"
+##### Selecting the file and pages #####
+
+# Selecting the path to the PDF file
+
+url <- "C:/Users/ĞĞ½Ğ´Ñ€ĞµĞ¹/Desktop/TSLA.pdf"
 
 file <- pdf_text(url)
 
+# Selecting the page that and copying it into a new PDF file 
 
 pdf_subset(url, pages = 68, output = "intro2.pdf")
 
-file2 <- pdf_text("C:/Users/Àíäğåé/Desktop/intro2.pdf")
+file2 <- pdf_text("C:/Users/ĞĞ½Ğ´Ñ€ĞµĞ¹/Desktop/intro2.pdf")
 
+
+##### Splitting the data into a table #####
+
+
+# Unlisting the file and creating an empty matrix as large as the desired table
 filesplit <- c(unlist(strsplit(file2[[1]], "\n"))) 
 transition <- matrix(NA, nrow = length(filesplit), ncol = 3)
 # table <- matrix(NA, nrow = length(filesplit), ncol = 3)
 filesplit_init <- filesplit
+
+# Writing a loop that at first removes special symbols and afterwards finds the desired combination of symbols using regular expressions
+# Afterwards the resuts are saved into the matrix created in the previous step
 
 for (i in seq_along(filesplit)) {
   
@@ -38,10 +53,10 @@ for (i in seq_along(filesplit)) {
   col1 <- filesplit[i]
   fands <- str_match(str_squish(filesplit[i]),"-*\\d+ -*\\d+$")
   if(is.na(fands) == TRUE) {
-    fands <- str_match(str_squish(filesplit[i]),"— -*\\d+$")
-    }
+    fands <- str_match(str_squish(filesplit[i]),"â€” -*\\d+$")
+  }
   if(is.na(fands) == TRUE) {
-    fands <- str_match(str_squish(filesplit[i]),"-*\\d+ —")
+    fands <- str_match(str_squish(filesplit[i]),"-*\\d+ â€”")
   }
   
   col2 <- str_match(str_squish(fands),"-*\\d+")
@@ -49,11 +64,11 @@ for (i in seq_along(filesplit)) {
   
   if(is.na(col3) == FALSE) {
     col1 <- str_remove(col1, col3)
-    }
+  }
   if(is.na(col2) == FALSE) {
     col1 <- str_remove(col1, col2)
-    }
-    
+  }
+  
   transition[i,1] <- toString(col1)
   transition[i,2] <- as.numeric(col2)
   transition[i,3] <- as.numeric(col3)
@@ -101,6 +116,7 @@ for (i in seq_along(filesplit)) {
 
 filesplit_init
 
+# Now the matrix can be rewritten into a data frame format and the respective excel sheet containing the data can be created
 
 frame <- as.data.frame(transition)
 write.xlsx(frame, "file.xlsx", sheetName = "Sheet1", 
