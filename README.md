@@ -4,7 +4,7 @@ This repository is created to show the programming topics I am familiar with. Th
 Description files of my projects are inside the folders
 
 Currently, there are examples of:
-* Time-series econometrical analysis of export data (map Econometrics) which includes stationarity tests, AR, ADL and cointegration models (the code was firstly written in Stata and then replicated in R)
+* Time-series econometrical analysis of export data (map Econometrics) which includes stationarity tests, AR, ADL and cointegration models (the code was initially written in Stata and then replicated in R)
 * Data parser which takes information on flats from ss.lv and tries to find the undervalued flats for sale (uses the ML technique)
 * Data parser that allows to get information from a PDF file in excel format (in two ways)
 * Other smaller projects that I used as instruments at work
