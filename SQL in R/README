@@ -1,0 +1,5 @@
+*** DESCRIPTION ***
+This file contains some examples of how the user can apply SQL language to work with R data frames, which is an alternative to dplyr package with its own pros and cons
+The data is the same as in the parser -> parser.csv file which was collected with R code as well. More information on that code and data here: https://github.com/amigunovs/CV_projects/tree/main/parser
+
+Applied libraries: sqldf
