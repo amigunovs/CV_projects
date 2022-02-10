@@ -1,4 +1,4 @@
-setwd("C:/Users/ΐνδπει/Desktop/R projects/Parser + machine learning")
+setwd("C:/Users/Γ€Γ­Γ¤Γ°Γ¥Γ©/Desktop/R projects/Parser + machine learning")
 source("Parser_ss.R")
 
 if(!"dplyr" %in% installed.packages()) install.packages("dplyr")
