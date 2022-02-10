@@ -1,0 +1,9 @@
+*** DESCRIPTION *** 
+
+The script takes country codes, searches for the eurostat quarterly data on the debt level and population and builds a few plots with ggplot2 package that show:
+* The debt level per capita and its change compared to the previous quarter by European country
+* The debt level as % of GDP and its changes in percentage points compared to the previous quarter by European country
+
+Afterwards the script saves the plots in a new PDF file.
+
+Note: data on population is published yearly while the debt data is available with quarterly frequency. For simplicity I take the latest debt data and divide it by the latest  population data without any adjustment (even though the population data changes during the year)
