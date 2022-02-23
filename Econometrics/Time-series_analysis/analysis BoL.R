@@ -1,4 +1,4 @@
-setwd("C:/Users/ΐνδπει/Desktop")
+setwd("C:/Users/Γ€Γ­Γ¤Γ°Γ¥Γ©/Desktop")
 
 source("BoL data.R")
 
