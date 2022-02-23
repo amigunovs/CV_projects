@@ -1,0 +1,10 @@
+*** DATA AND APPROACH ***
+
+The data is created from the European Commission survey data about life in different European cities, GDP in those cities, population data and is already prepared for the analysis 
+(The observations with missing dependent variables are removed and the data is reshaped the way it can be analyzed in R).
+The script performs principal component analysis to construct several factors (indices) that  might influence the GDP growth rate in the cities. Other factors are added separately.
+After the PCA, several OLS regressions are added just to demonstrate high sensitivity of the models (different specifications give different significance levels for the same factors).
+Thus, the BMA model is used to find factors which tests all possible combinations with specified factors and shows the factors that are and are not significant in most cases.
+
+*** REMARKS ***
+This was one of the recent tasks in the University of Latvia which was done in teams
